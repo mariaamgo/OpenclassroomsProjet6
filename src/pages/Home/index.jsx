@@ -1,8 +1,21 @@
+import Banner from '../../components/Banner'
+import Card from '../../components/Card'
+import Background from '../../assets/paysage_mer.png'
+
 function Home() {
   return (
-    <div>
-      <h1> Page d'accueil 🏠</h1>
-    </div>
+    <main>
+      <Banner>
+        <img src={Background} alt="" className="banner__image" />
+        <div className="banner__content">
+          <h1 className="banner__title">
+            Chez vous,
+            <br /> partout et ailleurs
+          </h1>
+        </div>
+      </Banner>
+      <Card />
+    </main>
   )
 }
 
