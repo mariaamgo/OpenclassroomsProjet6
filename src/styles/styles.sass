@@ -1,44 +1,503 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
 
+$primary : #FF6060
+$secoundary : #F6F6F6
+$easing : cubic-bezier(.49,.18,.23,1)
+$border-radius-small: 5px
+$border-radius-medium: 10px
+$border-radius-large: 25px
+$border-radius-full: 100px
+
+*
+  box-sizing: border-box
+
 body
   box-sizing: border-box
   min-height: 100vh
   font-family: Montserrat
   margin: 0
-  padding: 50px 100px
+  padding: 50px 150px 0 150px
   position: relative
 
-header
+  @media (min-width: 320px) and (max-width: 767.98px)
+    padding: 25px 25px 0 25px
+
+.navbar
+  width: 100%
   display: flex
   justify-content: space-between
   align-items: center
+  margin-bottom: 50px
 
-  nav
-    .link
-      font-weight: 500
-      font-size: 1.5em
-      color: black
-      text-decoration: none
-      text-underline-offset: 5px
-      margin-left: 60px
-      position: relative
+  @media (min-width: 320px) and (max-width: 767.98px)
+    margin-bottom: 25px
 
-      &.active-link::after
-        content: ''
-        position: absolute
-        left: 0
-        right: 0
-        bottom: 1px
-        height: 1.5px
-        background: black
+  &__image
 
-footer
-  height: 50px
-  div
+    @media (min-width: 320px) and (max-width: 767.98px)
+      width: 40%  
+
+  &__link
+    font-weight: 500
+    font-size: 1.5em
+    color: black
+    text-decoration: none
+    text-underline-offset: 5px
+    margin-left: 60px
+    position: relative
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      text-transform: uppercase
+      font-size: 0.75em
+      margin-left: 25px
+
+    &--active::after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 1.5px
+      height: 1.3px
+      background: black
+
+.footer
+  height: 210px
+  margin-top: 50px
+
+  @media (min-width: 320px) and (max-width: 767.98px)
+    margin-top: 25px
+
+  &__content
     width: 100%
+    height: 210px
+    padding: 60px 0 30px 0
     position: absolute
     bottom: 0
     left: 0
     background-color: #000
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      padding-bottom: 60px
+
+  &__text
+    color: white
+    text-align: center
+    font-size: 1.5em
+    margin: 40px 0 0 0
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      font-size: 0.75em
+      width: 30%
+      margin-top: 15px
+
+.banner
+  width: 100%
+  height: 223px
+  margin-bottom: 45px
+  position: relative
+  border-radius: $border-radius-large
+  overflow: hidden
+  box-shadow: 0px 4px 4px 1px rgba(0,0,0,0.25)
+
+  @media (min-width: 320px) and (max-width: 767.98px)
+    margin-bottom: 25px
+    height: 110px
+    border-radius: $border-radius-medium
+    box-shadow: none
+
+  &__image
+    width: 100%
+    height: auto
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+    &--opacity
+      -webkit-filter : brightness(70%)
+      filter : brightness(70%)
+
+  &__content
+    width: 100%
+    height: 100%
+    margin: 0
+    position: absolute
+    top: 0
+    left: 0
+    background-color: rgba(0, 0, 0, 0.6)
+    display: flex
+    align-items: center
+    justify-content: center
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      justify-content: flex-start
+
+  &__title
+    font-size: 3em
+    color: white
+    text-shadow:  1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000
+
+    >br
+      display: none
+      
+    @media (min-width: 320px) and (max-width: 767.98px)
+      font-size: 1.5em
+      padding: 0 15px
+
+      >br
+        display: block
+
+.card-container
+  width: 100%
+  padding: 50px
+  display: grid
+  grid-template-columns: repeat(3, 340px)
+  grid-gap: 50px 0
+  grid-auto-rows: minmax(100px, auto)
+  justify-content: space-between
+  background-color: $secoundary
+  border-radius: $border-radius-large
+
+  @media (min-width: 320px) and (max-width: 767.98px)
+    padding: 0
+    grid-template-columns: repeat(1, 100%)
+    grid-gap: 25px 0
+    background-color: transparent
+
+  .card
+    width: 100%
+    height: 340px
+    display: inline-block
+    position: relative
+    border-radius: $border-radius-medium
+    overflow: hidden
+    box-shadow: 0px -70px 50px rgba(0, 0, 0, 0.4) inset
+    background: white
+
+    &__image
+      width: 100%
+      height: 100%
+      object-fit: cover
+      display: block
+      mix-blend-mode: multiply
+
+    &__title
+      color: #FFF
+      text-decoration: none
+      font-size: 1.125em
+      font-weight: 700
+      position: absolute
+      bottom: 0px
+      left: 0px
+      margin: 0
+      padding: 20px
+      line-height: 1.5em
+
+.collapse
+  list-style-type: none
+  margin: 0
+  padding: 0
+  display: flex
+  
+  &--about 
+    flex-direction: column
+    align-items: center
+
+    .collapse__list
+      width: 85%
+
+      @media (min-width: 320px) and (max-width: 767.98px)
+        width: 100%
+
+  &--accomodation
+    align-items: flex-start
+    justify-content: space-between
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      flex-direction: column
+
+    .collapse__list
+      width: 47%
+
+      @media (min-width: 320px) and (max-width: 767.98px)
+        width: 100%
+
+      ul
+        padding: 0
+
+      &--equipment
+        list-style-type: none
+
+  &__list
+    margin-bottom: 30px
+    position: relative
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      margin-bottom: 25px
+    
+    &:last-child
+      margin-bottom: 0
+
+  &__header
+    z-index: 10000
+    width: 100%
+    height: 52px
+    overflow: hidden
+    padding: 0 20px 0 15px
+    background-color: $primary
+    display: flex 
+    justify-content: space-between
+    align-items: center
+    border-radius: $border-radius-small
+    position: relative
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      height: 45px
+
+  &__title
+    color: #FFF
+    font-size: 1.5em
+    font-weight: 700
+    margin: 0
+
+  @media (min-width: 320px) and (max-width: 767.98px)
+    font-size: 0.815em
+
+  &__image
+    cursor: pointer
+    transition: transform 250ms linear
+
+    &--tranform
+      transform: rotate(-180deg)
+      transition: transform 250ms linear
+
+  &__content
+    z-index: 0
+    max-height: 500px
+    padding: 15px
+    background-color: $secoundary
+    border-radius: $border-radius-small
+    position: relative
+    transition: max-height 300ms $easing, padding 250ms $easing, transform 250ms $easing
+
+    &--close
+      max-height: 0
+      overflow: hidden
+      padding: 0 15px
+      transform: translateY(-52px)
+      transition: max-height 300ms $easing, padding 250ms $easing, transform 250ms $easing
+
+  &__description
+    margin: 0
+    font-size: 1.125em
+    line-height: 1.5em
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      font-size: 0.75em
+
+.carousel
+  width: 100%
+  height: 415px
+  overflow: hidden
+  border-radius: $border-radius-large
+  position: relative
+
+  @media (min-width: 320px) and (max-width: 767.98px)
+    height: 255px
+    border-radius: $border-radius-medium
+
+  &__image
+    width: 100%
+    height: 100%
+    object-fit: cover
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 0
+
+  &__button--left, &__button--right
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    background: none
+    border: none
+    z-index: 1000
+
+    >img 
+
+      @media (min-width: 320px) and (max-width: 767.98px)
+        width: 12px
+
+  &__button--left
+    left: 15px
+
+  &__button--right
+    right: 15px
+
+  &__number
+    color: #FFF
+    font-size: 1.125em
+    font-weight: 500
+    position: absolute
+    bottom: 10px
+    left: 50%
+    transform: translate(-50%, 0)
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+        display: none
+  
+.accomodation
+  display: flex
+  justify-content: space-between
+
+  @media (min-width: 320px) and (max-width: 767.98px)
+      flex-direction: column
+
+  h1
+    color: $primary
+    font-size: 2.25em
+    font-weight: 500
+    margin: 35px 0 0 0
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      margin-top: 15px
+      font-size: 1.125em
+
+  p
+    font-size: 1.125em
+    font-weight: 500
+    margin: 5px 0 25px 0
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      font-size: 0.875em
+      margin: 10px 0 10px 0
+
+  ul
+    display: flex
+    flex-wrap: wrap
+    padding: 0
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      margin-bottom: 0 
+
+    >li
+      font-size: 0.875em
+      font-weight: 700
+      text-align: center
+      list-style-type: none
+      background-color: $primary
+      color: $secoundary
+      border-radius: $border-radius-medium
+      margin-right: 10px
+      margin-bottom: 10px
+      padding: 5px 40px
+
+      @media (min-width: 320px) and (max-width: 767.98px)
+        font-size: 0.625em
+        
+  &__info
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      flex-direction: row-reverse
+      align-items: center
+      justify-content: space-between
+      margin: 15px 0
+  
+  &__host
+    display: flex
+    align-items: center
+    margin: 30px 0
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      margin: 0
+
+    >p
+      display: inline-block
+      line-height: 27px
+      color: $primary
+      font-size: 1.125em
+      font-weight: 500
+      text-align: right
+      margin: 0 15px 0 0
+
+      @media (min-width: 320px) and (max-width: 767.98px)
+        font-size: 0.75em
+        line-height: 17px
+
+    >img
+      width: 64px
+      height: 64px
+      border-radius: $border-radius-full
+
+      @media (min-width: 320px) and (max-width: 767.98px)
+        width: 32px
+        height: 32px
+
+  &__rating
+
+    >img
+
+      @media (min-width: 320px) and (max-width: 767.98px)
+        width: 13px    
+      
+      &:not(:first-child)
+        margin-left: 15px
+
+        @media (min-width: 320px) and (max-width: 767.98px)
+        margin-left: 5px    
+
+.error
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin: 100px 0 150px 0
+
+  &__code
+    color: $primary
+    font-size: 18em
+    font-weight: 700
+    margin: 0 0 100px  0
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      font-size: 7em
+
+  &__message
+    color: $primary
+    font-size: 2.25em
+    font-weight: 500
+    text-align: center
+    margin: 0 0 150px 0
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      font-size: 1.125em
+      line-height: 1.5em
+      width: 80%
+
+  &__link
+    color: #000
+    font-size: 1.125em
+    font-weight: 500
+    text-decoration: none
+    position: relative
+
+    @media (min-width: 320px) and (max-width: 767.98px)
+      font-size: 0.875em
+
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 1.5px
+      height: 1.3px
+      background: black
 
 
