@@ -1,5 +1,29 @@
+import Banner from '../../components/Banner'
+import Collapse from '../../components/Collapse'
+import Background from '../../assets/paysage_montagne.png'
+import aboutList from '../../datas/aboutList.json'
+
 function About() {
-  return <div>Ok</div>
+  return (
+    <main>
+      <Banner>
+        <img
+          src={Background}
+          alt=""
+          className="banner__image banner__image--opacity"
+        />
+      </Banner>
+      <ul className="collapse collapse--about">
+        {aboutList.map((about) => (
+          <Collapse
+            id={about.id}
+            title={about.title}
+            description={about.description}
+          />
+        ))}
+      </ul>
+    </main>
+  )
 }
 
 export default About
