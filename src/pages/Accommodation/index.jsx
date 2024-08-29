@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 function AccommodationListing() {
   const { accomodationId } = useParams()
 
+  //trouver l'annonce avec l'ID correspondant à accomodationId dans le tableau announcementList
   const announcement = announcementList.find(
     (announcement) => announcement.id === accomodationId,
   )
@@ -21,13 +22,14 @@ function AccommodationListing() {
     }
   }, [announcement]) // Dépendances pour garantir que l'effet se déclenche au bon moment
 
-  // Si `announcement` est `undefined`, on peut aussi retourner `null` pour éviter un rendu incomplet
+  // Si `announcement` est `undefined`, on retourne `null` pour éviter un rendu incomplet
   if (!announcement) {
-    return null // ou un indicateur de chargement, selon ce que tu préfères
+    return null
   }
 
   const equipments = (
     <ul>
+      {/* boucle sur les équipements pour en faire une liste */}
       {announcement.equipments.map((equipment, index) => (
         <li key={`equipment-${index}`} className="collapse__list--equipment">
           {equipment}
