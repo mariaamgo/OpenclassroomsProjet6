@@ -2,8 +2,10 @@ import pinkStar from '../../assets/pink_star.svg'
 import greyStar from '../../assets/grey_star.svg'
 
 function AccommodationCard({ announcement }) {
+  //séparation du nom et du prénom
   const [firstName, lastName] = announcement.host.name.split(' ')
 
+  //création d'un tableau de nombres pour faire une boucle pour afficher les étoiles de notation
   const numbers = [1, 2, 3, 4, 5]
 
   return (
