@@ -5,13 +5,16 @@ import arrowLeft from '../../assets/arrow_left.svg'
 function Slideshow({ pictures }) {
   const [index, setIndex] = useState(0)
 
+  //nombre d'images que contient le logement
   const length = pictures.length
 
+  //aller à l'image récédente
   const previousImage = () => {
     const newIndex = index - 1
     setIndex(newIndex < 0 ? length - 1 : newIndex)
   }
 
+  //aller à l'image suivante
   const nextImage = () => {
     const newIndex = index + 1
     setIndex(newIndex >= length ? 0 : newIndex)
