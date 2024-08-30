@@ -20,7 +20,7 @@ function AccommodationListing() {
       // Redirection vers la page d'erreur si l'ID est invalide
       navigate('/error', { replace: true })
     }
-  }, [announcement]) // Dépendances pour garantir que l'effet se déclenche au bon moment
+  }, [announcement, navigate]) // Dépendances pour garantir que l'effet se déclenche au bon moment
 
   // Si `announcement` est `undefined`, on retourne `null` pour éviter un rendu incomplet
   if (!announcement) {
