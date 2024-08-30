@@ -16,6 +16,7 @@ function About() {
       <ul className="collapse collapse--about">
         {aboutList.map((about) => (
           <Collapse
+            key={about.id}
             id={about.id}
             title={about.title}
             description={about.description}
