@@ -33,7 +33,7 @@ function Collapse({ id, title, description }) {
             : 'collapse__content collapse__content--close'
         }
       >
-        <p className="collapse__description">{description}</p>
+        <div className="collapse__description">{description}</div>
       </div>
     </li>
   )
