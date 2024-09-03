@@ -1,6 +1,6 @@
 import Collapse from '../../components/Collapse'
 import Slideshow from '../../components/Slideshow'
-import AccommodationCard from '../../components/AccommodationCard'
+import AccommodationDetails from '../../components/AccommodationDetails'
 import announcementList from '../../datas/announcementList.json'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
@@ -41,7 +41,7 @@ function Accommodation() {
   return (
     <>
       <Slideshow pictures={announcement.pictures} alt={announcement.title} />
-      <AccommodationCard announcement={announcement} />
+      <AccommodationDetails announcement={announcement} />
       <ul className="collapse collapse--accomodation">
         <Collapse
           id={`description-${announcement.id}`}
