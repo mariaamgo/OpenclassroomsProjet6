@@ -2,7 +2,7 @@ import { useState } from 'react'
 import arrowRight from '../../assets/arrow_right.svg'
 import arrowLeft from '../../assets/arrow_left.svg'
 
-function Slideshow({ pictures }) {
+function Slideshow({ pictures, alt }) {
   const [index, setIndex] = useState(0)
 
   //nombre d'images que contient le logement
@@ -22,14 +22,14 @@ function Slideshow({ pictures }) {
 
   return (
     <div className="carousel">
-      <img src={pictures[index]} alt="" className="carousel__image" />
+      <img src={pictures[index]} alt={alt} className="carousel__image" />
       {pictures.length > 1 && (
         <>
           <button onClick={previousImage} className="carousel__button--left">
-            <img src={arrowLeft} alt="" />
+            <img src={arrowLeft} alt="Flèche pointant à gauche" />
           </button>
           <button onClick={nextImage} className="carousel__button--right">
-            <img src={arrowRight} alt="" />
+            <img src={arrowRight} alt="Flèche pointant à droite" />
           </button>
           <p className="carousel__number">
             {index + 1}/{length}
