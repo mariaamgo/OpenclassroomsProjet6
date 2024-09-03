@@ -25,7 +25,7 @@ function Collapse({ id, title, description }) {
         <img
           src={Arrow}
           alt="Flèche tournée vers le bas"
-          className={isOpen && 'collapse__image--transform'}
+          className={isOpen ? 'collapse__image--transform' : undefined}
           onClick={handleClick}
         />
       </div>
