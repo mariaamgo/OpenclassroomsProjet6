@@ -1,39 +1,43 @@
-import { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Arrow from '../../assets/arrow.svg'
 
 function Collapse({ id, title, description }) {
-  const [isOpen, setIsOpen] = useState({})
+  const [isOpen, setIsOpen] = useState(false)
 
-  const handleClick = (id) => {
-    setIsOpen((prevState) => ({
-      ...prevState,
-      [id]: !prevState[id],
-    }))
+  const handleClick = () => {
+    setIsOpen((prevState) => !prevState)
   }
+
+  const contentRef = useRef(null)
+
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.style.maxHeight = isOpen
+        ? `${contentRef.current.scrollHeight}px`
+        : '0px'
+    }
+  }, [isOpen])
 
   return (
     <li className="collapse__list" key={id}>
       <div className="collapse__header">
-        <h2 className="collapse__title">{title}</h2>
+        <h2>{title}</h2>
         <img
           src={Arrow}
           alt="Flèche tournée vers le bas"
-          className={
-            isOpen[id]
-              ? 'collapse__image collapse__image--tranform'
-              : 'collapse__image'
-          }
-          onClick={() => handleClick(id)}
+          className={isOpen && 'collapse__image--transform'}
+          onClick={handleClick}
         />
       </div>
       <div
         className={
-          isOpen[id]
-            ? 'collapse__content'
-            : 'collapse__content collapse__content--close'
+          isOpen
+            ? 'collapse__content collapse__content--open'
+            : 'collapse__content'
         }
+        ref={contentRef}
       >
-        <div className="collapse__description">{description}</div>
+        <div>{description}</div>
       </div>
     </li>
   )
