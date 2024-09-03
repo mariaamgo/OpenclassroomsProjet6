@@ -5,7 +5,7 @@ import announcementList from '../../datas/announcementList.json'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 
-function AccommodationListing() {
+function Accommodation() {
   const { accomodationId } = useParams()
 
   //trouver l'annonce avec l'ID correspondant à accomodationId dans le tableau announcementList
@@ -40,7 +40,7 @@ function AccommodationListing() {
 
   return (
     <>
-      <Slideshow pictures={announcement.pictures} />
+      <Slideshow pictures={announcement.pictures} alt={announcement.title} />
       <AccommodationCard announcement={announcement} />
       <ul className="collapse collapse--accomodation">
         <Collapse
@@ -58,4 +58,4 @@ function AccommodationListing() {
   )
 }
 
-export default AccommodationListing
+export default Accommodation
