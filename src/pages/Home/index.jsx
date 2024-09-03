@@ -8,7 +8,7 @@ function Home() {
       <Banner>
         <img src={Background} alt="" className="banner__image" />
         <div className="banner__content">
-          <h1 className="banner__title">
+          <h1>
             Chez vous,
             <br /> partout et ailleurs
           </h1>
