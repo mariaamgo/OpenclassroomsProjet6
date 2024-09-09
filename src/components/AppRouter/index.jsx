@@ -15,7 +15,7 @@ function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/a_propos" element={<About />} />
         <Route
-          path="/accommodation/:accomodationId"
+          path="/accommodation/:accommodationId"
           element={<Accommodation />}
         />
         <Route path="/error" element={<Error />} />
