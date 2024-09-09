@@ -6,11 +6,11 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 
 function Accommodation() {
-  const { accomodationId } = useParams()
+  const { accommodationId } = useParams()
 
   //trouver l'annonce avec l'ID correspondant à accomodationId dans le tableau announcementList
   const announcement = announcementList.find(
-    (announcement) => announcement.id === accomodationId,
+    (announcement) => announcement.id === accommodationId,
   )
 
   const navigate = useNavigate()
@@ -50,7 +50,7 @@ function Accommodation() {
         />
         <Collapse
           id={`equipments-${announcement.id}`}
-          title="Équipement"
+          title="Équipements"
           description={equipments}
         />
       </ul>
