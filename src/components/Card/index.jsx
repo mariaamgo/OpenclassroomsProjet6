@@ -12,7 +12,7 @@ function Card() {
         >
           <img
             src={announcement.cover}
-            alt={announcement.description}
+            alt={announcement.title}
             className="card__image"
           />
           <h2 className="card__title">{announcement.title}</h2>
