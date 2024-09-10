@@ -22,7 +22,18 @@ function Slideshow({ pictures, alt }) {
 
   return (
     <div className="carousel">
-      <img src={pictures[index]} alt={alt} className="carousel__image" />
+      {pictures.map((picture, i) => (
+        <img
+          key={i}
+          src={picture}
+          alt={alt}
+          className={
+            i === index
+              ? 'carousel__image carousel__image--active'
+              : 'carousel__image'
+          }
+        />
+      ))}
       {pictures.length > 1 && (
         <>
           <button onClick={previousImage} className="carousel__button--left">
