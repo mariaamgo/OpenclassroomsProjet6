@@ -264,7 +264,6 @@ body
 
       &.collapse__image--transform
         transform: rotate(-180deg)
-        transition: transform 250ms linear
 
   &__content
     z-index: 0
@@ -307,6 +306,11 @@ body
     object-fit: cover
     @include absolute-zero-bottom-left
     z-index: 0
+    opacity: 0
+    transition: opacity 0.4s ease
+
+    &--active
+      opacity: 1
 
   &__button--left, &__button--right
     position: absolute
