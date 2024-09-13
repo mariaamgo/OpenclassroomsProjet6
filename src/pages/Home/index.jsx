@@ -1,6 +1,6 @@
 import Banner from '../../components/Banner'
 import Card from '../../components/Card'
-import Background from '../../assets/paysage_mer.png'
+import Background from '../../assets/landscapes/sea_​​landscape.webp'
 
 function Home() {
   return (
