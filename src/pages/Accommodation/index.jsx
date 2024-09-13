@@ -1,6 +1,7 @@
 import Collapse from '../../components/Collapse'
 import Slideshow from '../../components/Slideshow'
 import AccommodationDetails from '../../components/AccommodationDetails'
+import Equipments from '../../components/Equipments'
 import announcementList from '../../datas/announcementList.json'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
@@ -8,7 +9,7 @@ import { useEffect } from 'react'
 function Accommodation() {
   const { accommodationId } = useParams()
 
-  //trouver l'annonce avec l'ID correspondant à accomodationId dans le tableau announcementList
+  // Trouver l'annonce avec l'ID correspondant à accomodationId dans le tableau announcementList
   const announcement = announcementList.find(
     (announcement) => announcement.id === accommodationId,
   )
@@ -22,21 +23,10 @@ function Accommodation() {
     }
   }, [announcement, navigate]) // Dépendances pour garantir que l'effet se déclenche au bon moment
 
-  // Si `announcement` est `undefined`, on retourne `null` pour éviter un rendu incomplet
+  // Si announcement est undefined, on retourne null pour éviter un rendu incomplet
   if (!announcement) {
     return null
   }
-
-  const equipments = (
-    <ul>
-      {/* boucle sur les équipements pour en faire une liste */}
-      {announcement.equipments.map((equipment, index) => (
-        <li key={`equipment-${index}`} className="collapse__list--equipment">
-          {equipment}
-        </li>
-      ))}
-    </ul>
-  )
 
   return (
     <>
@@ -51,7 +41,7 @@ function Accommodation() {
         <Collapse
           id={`equipments-${announcement.id}`}
           title="Équipements"
-          description={equipments}
+          description={<Equipments equipments={announcement.equipments} />}
         />
       </ul>
     </>
