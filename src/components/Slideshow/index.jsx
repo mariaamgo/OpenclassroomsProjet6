@@ -24,7 +24,7 @@ function Slideshow({ pictures, alt }) {
     <div className="carousel">
       {pictures.map((picture, i) => (
         <img
-          key={i}
+          key={`picture-${i}`}
           src={picture}
           alt={alt}
           className={
