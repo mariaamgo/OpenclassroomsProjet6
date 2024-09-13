@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import Arrow from '../../assets/arrow.svg'
+import Arrow from '../../assets/icons/arrow.svg'
 
 function Collapse({ id, title, description }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -24,7 +24,7 @@ function Collapse({ id, title, description }) {
         <h2>{title}</h2>
         <img
           src={Arrow}
-          alt="Flèche tournée vers le bas"
+          alt="Flèche tournée vers le haut"
           className={isOpen ? 'collapse__image--transform' : undefined}
           onClick={handleClick}
         />
