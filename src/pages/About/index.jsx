@@ -1,6 +1,6 @@
 import Banner from '../../components/Banner'
 import Collapse from '../../components/Collapse'
-import Background from '../../assets/paysage_montagne.png'
+import Background from '../../assets/landscapes/mountain_landscape.webp'
 import aboutList from '../../datas/aboutList.json'
 
 function About() {
