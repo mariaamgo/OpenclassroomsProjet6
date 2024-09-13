@@ -1,5 +1,5 @@
-import pinkStar from '../../assets/pink_star.svg'
-import greyStar from '../../assets/grey_star.svg'
+import pinkStar from '../../assets/icons/pink_star.svg'
+import greyStar from '../../assets/icons/grey_star.svg'
 
 function AccommodationDetails({ announcement }) {
   //séparation du nom et du prénom
