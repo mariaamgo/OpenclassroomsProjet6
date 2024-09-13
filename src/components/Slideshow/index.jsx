@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import arrowRight from '../../assets/arrow_right.svg'
-import arrowLeft from '../../assets/arrow_left.svg'
+import arrowRight from '../../assets/icons/arrow_right.svg'
+import arrowLeft from '../../assets/icons/arrow_left.svg'
 
 function Slideshow({ pictures, alt }) {
   const [index, setIndex] = useState(0)
@@ -8,7 +8,7 @@ function Slideshow({ pictures, alt }) {
   //nombre d'images que contient le logement
   const length = pictures.length
 
-  //aller à l'image récédente
+  //aller à l'image précédente
   const previousImage = () => {
     const newIndex = index - 1
     setIndex(newIndex < 0 ? length - 1 : newIndex)
