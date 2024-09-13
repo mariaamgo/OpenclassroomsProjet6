@@ -21,6 +21,8 @@ body
   @media (max-width: 1024px)
     padding: 25px 25px 0 25px
 
+
+// Styles de la partie header
 .navbar
   width: $full-dimension
   display: flex
@@ -37,7 +39,7 @@ body
       width: 40% 
 
   &__link
-    font-weight: 500
+    font-weight: $font-weight-medium
     font-size: 1.5em
     color: $black
     text-decoration: none
@@ -53,6 +55,7 @@ body
     &--active::after
       @include underline(black)
 
+// Styles de la partie footer
 .footer
   height: 210px
   margin-top: 50px
@@ -85,6 +88,7 @@ body
         width: 30%
         margin-top: 15px
 
+// Styles de la bannière
 .banner
   width: $full-dimension
   height: 223px
@@ -140,6 +144,7 @@ body
         >br
           display: block
 
+// Styles de la galerie
 .card-container
   width: $full-dimension
   padding: 50px
@@ -182,12 +187,13 @@ body
       color: #FFF
       text-decoration: none
       font-size: 1.125em
-      font-weight: 700
+      font-weight: $font-weight-bold
       @include absolute-zero-bottom-left
       margin: 0
       padding: 20px
       line-height: 1.5em
 
+// Styles sur les collapses
 .collapse
   list-style-type: none
   margin: 0
@@ -252,7 +258,7 @@ body
     > h2
       color: #FFF
       font-size: 1.5em
-      font-weight: 700
+      font-weight: $font-weight-bold
       margin: 0
 
     @media (min-width: 320px) and (max-width: 767.98px)
@@ -289,6 +295,7 @@ body
       @media (min-width: 320px) and (max-width: 767.98px)
         font-size: 0.75em
 
+// Styles sur le carrousel
 .carousel
   width: $full-dimension
   height: 415px
@@ -319,6 +326,7 @@ body
     background: none
     border: none
     z-index: 1000
+    cursor: pointer
 
     >img 
 
@@ -334,7 +342,7 @@ body
   &__number
     color: #FFF
     font-size: 1.125em
-    font-weight: 500
+    font-weight: $font-weight-bold
     position: absolute
     bottom: 10px
     left: 50%
@@ -342,7 +350,8 @@ body
 
     @media (min-width: 320px) and (max-width: 767.98px)
         display: none
-  
+
+// Styles sur la partie détails des logements
 .accommodation-details
   display: flex
   justify-content: space-between
@@ -353,7 +362,7 @@ body
   h1
     color: $color-primary
     font-size: 2.25em
-    font-weight: 500
+    font-weight: $font-weight-medium
     margin: 35px 0 0 0
 
     @media (min-width: 320px) and (max-width: 767.98px)
@@ -362,7 +371,7 @@ body
 
   p
     font-size: 1.125em
-    font-weight: 500
+    font-weight: $font-weight-medium
     margin: 5px 0 25px 0
 
     @media (min-width: 320px) and (max-width: 767.98px)
@@ -379,7 +388,7 @@ body
 
     >li
       font-size: 0.875em
-      font-weight: 700
+      font-weight: $font-weight-bold
       text-align: center
       list-style-type: none
       background-color: $color-primary
@@ -419,7 +428,7 @@ body
       line-height: 27px
       color: $color-primary
       font-size: 1.125em
-      font-weight: 500
+      font-weight: $font-weight-medium
       text-align: right
       margin: 0 15px 0 0
 
@@ -449,6 +458,7 @@ body
         @media (min-width: 320px) and (max-width: 767.98px)
           margin-left: 5px    
 
+// Styles de la page d'erreur
 .error
   display: flex
   flex-direction: column
@@ -459,7 +469,7 @@ body
   &__code
     color: $color-primary
     font-size: 18em
-    font-weight: 700
+    font-weight: $font-weight-bold
     margin: 0 0 100px  0
 
     @media (min-width: 320px) and (max-width: 767.98px)
@@ -468,7 +478,7 @@ body
   &__message
     color: $color-primary
     font-size: 2.25em
-    font-weight: 500
+    font-weight: $font-weight-medium
     text-align: center
     margin: 0 0 150px 0
 
@@ -480,7 +490,7 @@ body
   &__link
     color: $black
     font-size: 1.125em
-    font-weight: 500
+    font-weight: $font-weight-medium
     text-decoration: none
     position: relative
 
