@@ -281,6 +281,9 @@ body
     position: relative
     transition: max-height 0.4s ease, padding 0.4s ease, transform 0.4s ease
 
+    @media (min-width: 320px) and (max-width: 767.98px)
+      transform: translateY(-30px)
+
     &--open 
       transform: translateY(0)
       box-sizing: content-box
