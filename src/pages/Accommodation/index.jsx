@@ -19,7 +19,7 @@ function Accommodation() {
   useEffect(() => {
     if (!announcement) {
       // Redirection vers la page d'erreur si l'ID est invalide
-      navigate('/error', { replace: true })
+      navigate('/erreur', { replace: true })
     }
   }, [announcement, navigate]) // Dépendances pour garantir que l'effet se déclenche au bon moment
 
