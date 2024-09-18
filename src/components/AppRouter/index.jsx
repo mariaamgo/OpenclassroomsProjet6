@@ -15,10 +15,10 @@ function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/a_propos" element={<About />} />
         <Route
-          path="/accommodation/:accommodationId"
+          path="/appartement/:accommodationId"
           element={<Accommodation />}
         />
-        <Route path="/error" element={<Error />} />
+        <Route path="/erreur" element={<Error />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
