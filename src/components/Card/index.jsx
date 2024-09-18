@@ -6,7 +6,7 @@ function Card() {
     <div className="card-container">
       {announcementList.map((announcement) => (
         <Link
-          to={`/accommodation/${announcement.id}`}
+          to={`/appartement/${announcement.id}`}
           key={announcement.id}
           className="card"
         >
