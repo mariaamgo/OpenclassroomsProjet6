@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 import arrowRight from '../../assets/icons/arrow_right.svg'
 import arrowLeft from '../../assets/icons/arrow_left.svg'
 
@@ -49,6 +50,11 @@ function Slideshow({ pictures, alt }) {
       )}
     </div>
   )
+}
+
+Slideshow.propTypes = {
+  pictures: PropTypes.array.isRequired,
+  alt: PropTypes.string.isRequired,
 }
 
 export default Slideshow

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function Equipments({ equipments }) {
   return (
     <ul>
@@ -8,6 +10,10 @@ function Equipments({ equipments }) {
       ))}
     </ul>
   )
+}
+
+Equipments.propTypes = {
+  equipments: PropTypes.array.isRequired,
 }
 
 export default Equipments

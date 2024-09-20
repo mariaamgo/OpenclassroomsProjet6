@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import pinkStar from '../../assets/icons/pink_star.svg'
 import greyStar from '../../assets/icons/grey_star.svg'
 
@@ -48,6 +49,10 @@ function AccommodationDetails({ announcement }) {
       </div>
     </div>
   )
+}
+
+AccommodationDetails.propTypes = {
+  announcement: PropTypes.object.isRequired,
 }
 
 export default AccommodationDetails

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import Arrow from '../../assets/icons/arrow.svg'
 
 function Collapse({ id, title, description }) {
@@ -41,6 +42,13 @@ function Collapse({ id, title, description }) {
       </div>
     </li>
   )
+}
+
+Collapse.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+    .isRequired,
 }
 
 export default Collapse
