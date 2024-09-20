@@ -6,7 +6,11 @@ function Home() {
   return (
     <main>
       <Banner>
-        <img src={Background} alt="" className="banner__image" />
+        <img
+          src={Background}
+          alt="Paysage de la mer"
+          className="banner__image"
+        />
         <div className="banner__content">
           <h1>
             Chez vous,

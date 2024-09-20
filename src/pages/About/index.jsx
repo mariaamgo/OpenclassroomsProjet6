@@ -9,7 +9,7 @@ function About() {
       <Banner>
         <img
           src={Background}
-          alt=""
+          alt="Paysage de montagne"
           className="banner__image banner__image--opacity"
         />
       </Banner>
