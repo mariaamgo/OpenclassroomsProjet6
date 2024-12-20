@@ -9,7 +9,7 @@ import About from '../../pages/About'
 
 function AppRouter() {
   return (
-    <Router>
+    <Router basename="/OpenclassroomsProjet6">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
