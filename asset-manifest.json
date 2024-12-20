@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/OpenclassroomsProjet6/static/css/main.429487f1.css",
-    "main.js": "/OpenclassroomsProjet6/static/js/main.f82ac9c2.js",
+    "main.js": "/OpenclassroomsProjet6/static/js/main.1a871cd0.js",
     "static/media/mountain_landscape.webp": "/OpenclassroomsProjet6/static/media/mountain_landscape.38e7bc7bf608df8c8db0.webp",
     "static/media/sea_​​landscape.webp": "/OpenclassroomsProjet6/static/media/sea_​​landscape.5ace4a582e458aadb307.webp",
     "static/media/logo_white.svg": "/OpenclassroomsProjet6/static/media/logo_white.a704cd7679e4c79056dcca5dc733d583.svg",
@@ -13,10 +13,10 @@
     "static/media/arrow_right.svg": "/OpenclassroomsProjet6/static/media/arrow_right.88153a5d119c2744ffe34dca1ef843df.svg",
     "static/media/arrow_left.svg": "/OpenclassroomsProjet6/static/media/arrow_left.19918a1634b1441a25ae0b50e6b1f85b.svg",
     "main.429487f1.css.map": "/OpenclassroomsProjet6/static/css/main.429487f1.css.map",
-    "main.f82ac9c2.js.map": "/OpenclassroomsProjet6/static/js/main.f82ac9c2.js.map"
+    "main.1a871cd0.js.map": "/OpenclassroomsProjet6/static/js/main.1a871cd0.js.map"
   },
   "entrypoints": [
     "static/css/main.429487f1.css",
-    "static/js/main.f82ac9c2.js"
+    "static/js/main.1a871cd0.js"
   ]
 }
