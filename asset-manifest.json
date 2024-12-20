@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/OpenclassroomsProjet6/static/css/main.429487f1.css",
+    "main.js": "/OpenclassroomsProjet6/static/js/main.f82ac9c2.js",
+    "static/media/mountain_landscape.webp": "/OpenclassroomsProjet6/static/media/mountain_landscape.38e7bc7bf608df8c8db0.webp",
+    "static/media/sea_​​landscape.webp": "/OpenclassroomsProjet6/static/media/sea_​​landscape.5ace4a582e458aadb307.webp",
+    "static/media/logo_white.svg": "/OpenclassroomsProjet6/static/media/logo_white.a704cd7679e4c79056dcca5dc733d583.svg",
+    "static/media/logo_pink.svg": "/OpenclassroomsProjet6/static/media/logo_pink.a5c76d8a1dac09edd59db36304e0bcfa.svg",
+    "static/media/grey_star.svg": "/OpenclassroomsProjet6/static/media/grey_star.68fd8a1ead5375bd59bb6ae0b633ffd3.svg",
+    "static/media/pink_star.svg": "/OpenclassroomsProjet6/static/media/pink_star.30b8963e66a47777ef47296f505567be.svg",
+    "index.html": "/OpenclassroomsProjet6/index.html",
+    "static/media/arrow.svg": "/OpenclassroomsProjet6/static/media/arrow.4b8a8db56debe28d08d9e59e272bbc3c.svg",
+    "static/media/arrow_right.svg": "/OpenclassroomsProjet6/static/media/arrow_right.88153a5d119c2744ffe34dca1ef843df.svg",
+    "static/media/arrow_left.svg": "/OpenclassroomsProjet6/static/media/arrow_left.19918a1634b1441a25ae0b50e6b1f85b.svg",
+    "main.429487f1.css.map": "/OpenclassroomsProjet6/static/css/main.429487f1.css.map",
+    "main.f82ac9c2.js.map": "/OpenclassroomsProjet6/static/js/main.f82ac9c2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.429487f1.css",
+    "static/js/main.f82ac9c2.js"
+  ]
+}
